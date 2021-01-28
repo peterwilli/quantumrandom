@@ -90,7 +90,7 @@ else:
 
 def binary(array_length=100, block_size=100):
     """Return a chunk of binary data"""
-    return binascii.unhexlify(six.b(hex(array_length, block_size)))
+    return binascii.unhexlify(six.b(hex(array_length, block_size))).decode('utf8')
 
 
 def hex(array_length=100, block_size=100):
